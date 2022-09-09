@@ -50,6 +50,8 @@
 
 
 
+
+
 // 4 Группа методов. (методы которые чтото принимают И чтото возвращают)
 
 // string Method4(int count, string text)
@@ -110,6 +112,7 @@
 //             + "И познакомимся с новыми языковыми конструкциями, "
 //             + "в частности, циклом.";
 
+
 // string Replace(string text, char oldValue, char newValue)
 // {
 //     string result = String.Empty;
@@ -146,34 +149,34 @@
 
 // сортировка от min к max
 
-int[] arr = {1, 5, 4, 3, 2, 6, 7, 1, 1};
+// int[] arr = {1, 5, 4, 3, 2, 6, 7, 1, 1};
 
-void PrintArray(int[] array)
-{
-    int count = array.Length;
-    for (int i = 0; i < count; i++)
-    {
-            Console.Write($"{array[i]} ");
-    }
-    Console.WriteLine();
-}
+// void PrintArray(int[] array)
+// {
+//     int count = array.Length;
+//     for (int i = 0; i < count; i++)
+//     {
+//             Console.Write($"{array[i]} ");
+//     }
+//     Console.WriteLine();
+// }
 
-void SelectionSort(int[] array)
-{
-    for (int i = 0; i < array.Length - 1; i++)
-    {
-        int minPosition = i;
-        for (int j = i + 1; j < array.Length ; j++)
-        {
-            if(array[j] < array[minPosition]) minPosition = j;
-        }
-        for
-        int temporary = array[i];
-        array[i] = array[minPosition];
-        array[minPosition] = temporary;
-    }
-}
+// void SelectionSort(int[] array)
+// {
+//     for (int i = 0; i < array.Length - 1; i++)
+//     {
+//         int minPosition = i;
+//         for (int j = i + 1; j < array.Length ; j++)
+//         {
+//             if(array[j] < array[minPosition]) minPosition = j;
+//         }
+//         for
+//         int temporary = array[i];
+//         array[i] = array[minPosition];
+//         array[minPosition] = temporary;
+//     }
+// }
 
-PrintArray(arr);
-SelectionSort(arr);
-PrintArray(arr);
+// PrintArray(arr);
+// SelectionSort(arr);
+// PrintArray(arr);

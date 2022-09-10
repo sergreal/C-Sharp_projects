@@ -33,6 +33,7 @@
 //var.2, Дарья
 
 // string CheckChetvert(int chet)
+//
 // {
 //     string res;
 //     if(chet == 1) res = "x > 0, y > 0";
@@ -234,7 +235,6 @@
 // 2 -> 1,4
 
 
-
 // string squareTable(int num)
 // {
 //     string result = $"{num} -> 1";
@@ -257,19 +257,83 @@
 
 
 
-string numSquares(int num)
+// string numSquares(int num)
+// {
+//     int i = 2;
+//     string squares = "1";
+//     while (i <= num)
+//     {
+//         squares = squares + ", " + Convert.ToString(i * i);
+//         i++;
+//     }
+//     return squares;
+// }
+
+// Console.WriteLine("Введите число N: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(numSquares(num));
+
+
+// -------------------------------------------------------------------------
+
+
+// 17. Напишите программу, которая принимает на вход координаты точки 
+// (X и Y), причём X ≠ 0 и Y ≠ 0 , и выдаёт номер четверти плоскости, 
+// в которой находится эта точка.
+
+
+int CheckChetvert(int x, int y)
 {
-    int i = 2;
-    string squares = "1";
-    while (i <= num)
-    {
-        squares = squares + ", " + Convert.ToString(i * i);
-        i++;
-    }
-    return squares;
+    int res;
+    if (x>0 && y>0) res=1;
+    else if (x>0 && y<0) res=4;
+    else if (x<0 && y<0) res=3;
+    else if (x<0 && y>0) res=2;
+    else res = 0;
+    return res;
 }
 
-Console.WriteLine("Введите число N: ");
-int num = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(numSquares(num));
+try
+{
+    Console.Write ("Введите координату х ");
+    int x = Convert.ToInt32 (Console.ReadLine());
+    Console.Write ("Введите координату y ");
+    int y = Convert.ToInt32 (Console.ReadLine());
+    int rez = CheckChetvert(x,y);
+    if (rez!=0) Console.WriteLine($"Точка находится в четверти № {rez}");
+    else Console.WriteLine("Точка находится лежит на какой-то оси");
+}
+catch
+{
+    Console.WriteLine("Надо было вводить именно целые числа");
+}
 
+
+
+// -------------------------------------------------------------------------
+
+
+
+
+string CheckChetvert(int chet)
+{
+string res;
+if (chet == 1) res= "x > 0, y > 0";
+else if (chet == 2) res="x < 0, y > 0";
+else if (chet == 3) res= "x < 0, y < 0";
+else if (chet == 4) res="x > 0, y < 0";
+else res = "incorrect number";
+return res;
+}
+
+try
+{
+Console.Write ("enter number from 1 to 4 ");
+int chet = Convert.ToInt32 (Console.ReadLine());
+string rez = CheckChetvert(chet);
+Console.WriteLine (rez);
+}
+catch
+{
+Console.WriteLine("Надо было вводить именно целые числа");
+}

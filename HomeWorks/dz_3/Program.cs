@@ -9,31 +9,50 @@
 // 23432 -> да
 
 
+int numPalindrom()
 
-
-// var.
-
-int x = new Random().Next(10,100);
-    int x1 = x/10;
-    int x2 = x%10;
-    Console.WriteLine($"Сгенерировано случайное число {x} ");
-    if (x1>x2) Console.WriteLine("Первая цифра больше");
-    else if (x2>x1) Console.WriteLine("Вторая цифра больше");
-    else Console.WriteLine("Это паллиндром!");
-
-
-void CompareDigits()
 {
-    int x = new Random().Next(10,100);
-    int x1 = x/10;
-    int x2 = x%10;
-    Console.WriteLine($"Сгенерировано случайное число {x} ");
-    if (x1>x2) Console.WriteLine("Первая цифра больше");
-    else if (x2>x1) Console.WriteLine("Вторая цифра больше");
-    else Console.WriteLine("Это паллиндром!");
+    Console.WriteLine("Введите пятизначное число: ");
+    int numbers = Convert.ToInt32(Console.ReadLine());
+    foreach (int number in numbers)
+    {
+        if (number[0] == number[4] && number[1] == number[3]) Console.WriteLine($"Введенное число {numbers}, является палиндромом.");
+        else Console.WriteLine($"Введенное число {numbers}, НЕ является палиндромом.");
+    }
+    return numbers;
 }
 
-    CompareDigits();
+int res = numPalindrom();
+Console.WriteLine(res);
+ 
+
+
+// var. может сделать из нее.
+// int numPalindrom()
+
+
+// int x = new Random().Next(10,100);
+//     int x1 = x/10;
+//     int x2 = x%10;
+//     Console.WriteLine($"Сгенерировано случайное число {x} ");
+//     if (x1>x2) Console.WriteLine("Первая цифра больше");
+//     else if (x2>x1) Console.WriteLine("Вторая цифра больше");
+//     else Console.WriteLine("Это паллиндром!");
+
+// void CompareDigits()
+// {
+//     int x = new Random().Next(10,100);
+//     int x1 = x/10;
+//     int x2 = x%10;
+//     Console.WriteLine($"Сгенерировано случайное число {x} ");
+//     if (x1>x2) Console.WriteLine("Первая цифра больше");
+//     else if (x2>x1) Console.WriteLine("Вторая цифра больше");
+//     else Console.WriteLine("Это паллиндром!");
+// }
+//     CompareDigits();
+
+
+
 
 
 
@@ -80,6 +99,7 @@ void CompareDigits()
 //  string result = $"{num} -> 1";
 
 
+
 // string numSquares(int num)
 // {
 //     int i = 2;
@@ -91,7 +111,7 @@ void CompareDigits()
 //     }
 //     return squares;
 // }
-
+//
 // Console.WriteLine("Введите число N: ");
 // int num = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine(numSquares(num));

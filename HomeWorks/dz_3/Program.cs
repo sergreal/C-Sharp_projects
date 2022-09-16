@@ -1,55 +1,24 @@
-﻿// Урок 3. Массивы и функции в программировании
+﻿
+// Урок 3. Массивы и функции в программировании
 
 
 // Задача 19
 // Напишите программу, которая принимает на вход пятизначное число 
-// и проверяет, является ли оно палиндромом.
+// и проверяет, является ли оно палиндромом (с помощью цикла).
 // 14212 -> нет
 // 12821 -> да
 // 23432 -> да
 
 
-int numPalindrom()
-
+void Palindrom()
 {
-    Console.WriteLine("Введите пятизначное число: ");
-    int numbers = Convert.ToInt32(Console.ReadLine());
-    foreach (int number in numbers)
-    {
-        if (number[0] == number[4] && number[1] == number[3]) Console.WriteLine($"Введенное число {numbers}, является палиндромом.");
-        else Console.WriteLine($"Введенное число {numbers}, НЕ является палиндромом.");
-    }
-    return numbers;
+Console.WriteLine("Введите число из пяти цифр: ");
+int num = Convert.ToInt32(Console.ReadLine());
+string str = num.ToString();
+if (str[0] == str[4] && str[1] == str[3]) Console.WriteLine($"Введеное вами число {num} - является палиндромом.");
+else Console.WriteLine($"Поздравляем! Вы ввели число: {num}.");
 }
-
-int res = numPalindrom();
-Console.WriteLine(res);
- 
-
-
-// var. может сделать из нее.
-// int numPalindrom()
-
-
-// int x = new Random().Next(10,100);
-//     int x1 = x/10;
-//     int x2 = x%10;
-//     Console.WriteLine($"Сгенерировано случайное число {x} ");
-//     if (x1>x2) Console.WriteLine("Первая цифра больше");
-//     else if (x2>x1) Console.WriteLine("Вторая цифра больше");
-//     else Console.WriteLine("Это паллиндром!");
-
-// void CompareDigits()
-// {
-//     int x = new Random().Next(10,100);
-//     int x1 = x/10;
-//     int x2 = x%10;
-//     Console.WriteLine($"Сгенерировано случайное число {x} ");
-//     if (x1>x2) Console.WriteLine("Первая цифра больше");
-//     else if (x2>x1) Console.WriteLine("Вторая цифра больше");
-//     else Console.WriteLine("Это паллиндром!");
-// }
-//     CompareDigits();
+Palindrom();
 
 
 
@@ -57,7 +26,10 @@ Console.WriteLine(res);
 
 
 
-////////////////////////////////////////////////////////////////////////////////
+
+//------------------------------------------------------------------------------
+
+
 
 // Задача 21
 // Напишите программу, которая принимает на вход координаты двух точек 
@@ -65,6 +37,27 @@ Console.WriteLine(res);
 // A (3,6,8); B (2,1,-7), -> 15.84
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
+// void Dist()
+// {
+// Console.WriteLine("Введите координаты точки A: ");
+// int x1 = Convert.ToInt32(Console.ReadLine());
+// int y1 = Convert.ToInt32(Console.ReadLine());
+// int z1 = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Введите координаты точки B: ");
+// int x2 = Convert.ToInt32(Console.ReadLine());
+// int y2 = Convert.ToInt32(Console.ReadLine());
+// int z2 = Convert.ToInt32(Console.ReadLine());
+
+// double distance = Math.Round((Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2) + Math.Pow(z2 - z1, 2))),4);
+// Console.WriteLine($"Расстояние между точками А и В, в 3D пространстве -> {distance}");
+// }
+// Dist();
+
+
+
+
+// var.2
 // double distance()
 // {
 //     Console.WriteLine("Введите координаты первой точки по оси x, y, z: ");
@@ -83,11 +76,13 @@ Console.WriteLine(res);
 // }
 
 // double sqr = distance();
-// Console.WriteLine(sqr);
+// Console.WriteLine($"Расстояние между точками A и B, в 3D пространстве -> {sqr}");
+
+
+//------------------------------------------------------------------------------
 
 
 
-////////////////////////////////////////////////////////////////////////////////
 
 // Задача 23
 // Напишите программу, которая принимает на вход число (N) 
@@ -95,11 +90,29 @@ Console.WriteLine(res);
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-// + подумать как вывести красивый вывод
-//  string result = $"{num} -> 1";
+// void Tabl()
+// {
+// Console.WriteLine("Введите число: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+
+// double num = 0;
+// string sum = string.Empty;
+// for (int i = 1; i <= N;)
+// {
+//     num = Math.Pow(i, 3);
+//     sum = sum + ", " + num;
+//     i++;
+// };
+// Console.WriteLine($"{N} -> {sum}");
+// }
+// Tabl();
 
 
 
+
+
+
+// var.2
 // string numSquares(int num)
 // {
 //     int i = 2;
@@ -111,7 +124,16 @@ Console.WriteLine(res);
 //     }
 //     return squares;
 // }
-//
+
 // Console.WriteLine("Введите число N: ");
 // int num = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine(numSquares(num));
+// Console.WriteLine($"Вы ввели число: {num}.");
+// Console.WriteLine($"Кубы чисел от 1 до {num}, составляют числа  ->  {numSquares(num)}.");
+
+
+//------------------------------------------------------------------------------
+
+
+
+
+

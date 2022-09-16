@@ -199,6 +199,9 @@ void Task_8()
 Task_8();
 */
 
+// int num[] = int num1[0]
+// while (num < )
+
 
 //-----------------------------------------------
 /*
@@ -246,7 +249,8 @@ NewTask ();
 32679 -> 6
 */
 
-/*
+
+/*     неправильное решение
 void NumThird()
 {
 Console.Write("Введите число, от 1 до 100000:  ");
@@ -255,15 +259,17 @@ int num2 = num%10;
 if (num2 == 0) Console.WriteLine("В введенном числе нет третьей цифры.");
 else Console.WriteLine($"Третья цифра в числе {num} - {num2}.");
 }
-
 NumThird();
 */
 
+
+//  приавильное решение
 /*
+
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 string num2 = Convert.ToString(num);
-if (num2.Length > 2) Console.WriteLine($"В числе: {num}, третья цифра: {num2[2]}.");
+if (num2.Length > 2) Console.Writ eLine($"В числе: {num}, третья цифра: {num2[2]}.");
 else Console.WriteLine($"В числе: {num}, третьей цифры нет.");
 */
 
@@ -310,6 +316,63 @@ WeekDay();
 // numMax();
 
 
+//------------------------------------------------------------------------------
+
+
+
+// try
+// {
+//     void Square()
+//     {
+//             int num = 1;
+//             Console.Write("Введите целое число - ");
+//             int N = Convert.ToInt32(Console.ReadLine());
+
+//             Console.Write("Список чётных чисел - ");
+//             while(num < N)
+//             {
+//                 if(num % 2 == 0) 
+//                 Console.Write($"{num}, ");
+//                 num++;
+//             }
+//     }
+//     Square();
+// }
+// catch
+// {
+//     Console.Write("Напишите цифру");
+// }
+
+
+//------------------------------------------------------------------------------
+
+// Задача 19
+// Напишите программу, которая принимает на вход пятизначное число и проверяет, 
+// является ли оно палиндромом.
+// 14212 -> нет
+// 12821 -> да
+// 23432 -> да
+
+
+// Console.WriteLine("Введите число из пяти цифр: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// string str = num.ToString();
+// if (str[0] == str[4] && str[1] == str[3]) Console.WriteLine($"Введеное вами число {num} - является палиндромом. Это может быть заразно!");
+// else Console.WriteLine($"Поздравляем! Вы ввели число из пяти цифр: {num}. А теперь, номер карточки и пин-код.");
+
+//------------------------------------------------------------------------------
+
+
+
+// int[] array ()
+
+// {
+//     int[] j = 0;
+//     Console.WriteLine("Введите число от 1 до бесконечности: ");
+//     int[] j = Convert.ToInt32(Console.ReadLine());
+// }
+
+// Console.WriteLine(array);
 
 
 
@@ -318,3 +381,194 @@ WeekDay();
 
 
 
+
+// try
+// {
+//     Console.Write("Введите целое число: ");
+//     int a = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine($"Сумма всех натуральных чисел от 1 до {a} через цикл FOR равна {SummaFor(a)}");
+//     Console.WriteLine($"Сумма всех натуральных чисел от 1 до {a} через цикл WHILE равна {SummaWile(a)}");
+
+// }
+
+// catch (System.Exception)
+// {
+//     Console.WriteLine("Надо было вводить именно целое число.");
+// }
+
+
+
+//------------------------------------------------------------------------------
+// ....записки
+// int [] array = new int[2];    // так объявляется массив, говорящий о том что в массиве будет 2 элемента.
+// array[1] =     //  а так, выводится 2й элемент из массива.
+//------------------------------------------------------------------------------
+
+
+
+
+
+
+
+// int numPalindrom()
+
+// {
+//     Console.WriteLine("Введите пятизначное число: ");
+//     int numbers = Convert.ToInt32(Console.ReadLine());
+//     string number = numbers.ToString();
+//     foreach (string number in numbers)
+//     {
+//         if (number[0] == number[4] && number[1] == number[3]) Console.WriteLine($"Введенное число {numbers}, является палиндромом.");
+//         else Console.WriteLine($"Введенное число {numbers}, НЕ является палиндромом.");
+//     }
+//     return numbers;
+// }
+// int res = numPalindrom();
+// Console.WriteLine(res);
+ 
+// foreach (string num in numbers)
+
+//------------------------------------------------------------------------------
+
+
+// Console.WriteLine("Введите число из нескольких цифр: ");
+// int numbers = Convert.ToInt32(Console.ReadLine());
+// int[] array = int {numbers};
+// string number = numbers.ToString();
+
+// num.sum = numbers[0];
+// while (count <= number.Length)
+// num.sum = 
+// count++;
+
+// {
+// number = number[1]
+// Sum = number[0] + number[1]
+// number=number[1]++ 
+// }
+
+
+
+
+
+// может чтото отсюда...?
+/*
+Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, 
+что третьей цифры нет.
+645 -> 5
+78 -> третьей цифры нет
+32679 -> 6
+*/
+
+/*
+void Task_13()
+{
+Console.Write("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+string num2 = Convert.ToString(num);
+if (num2.Length > 2) Console.WriteLine($"В числе: {num}, третья цифра: {num2[2]}.");
+else Console.WriteLine($"В числе: {num}, третьей цифры нет.");
+}
+Task_13();
+*/
+
+
+
+
+
+// var. может сделать из нее.
+// int numPalindrom()
+
+
+// int x = new Random().Next(10,100);
+//     int x1 = x/10;
+//     int x2 = x%10;
+//     Console.WriteLine($"Сгенерировано случайное число {x} ");
+//     if (x1>x2) Console.WriteLine("Первая цифра больше");
+//     else if (x2>x1) Console.WriteLine("Вторая цифра больше");
+//     else Console.WriteLine("Это паллиндром!");
+
+// void CompareDigits()
+// {
+//     int x = new Random().Next(10,100);
+//     int x1 = x/10;
+//     int x2 = x%10;
+//     Console.WriteLine($"Сгенерировано случайное число {x} ");
+//     if (x1>x2) Console.WriteLine("Первая цифра больше");
+//     else if (x2>x1) Console.WriteLine("Вторая цифра больше");
+//     else Console.WriteLine("Это паллиндром!");
+// }
+//     CompareDigits();
+
+
+
+
+
+
+----------------------------------------------------------------
+
+
+
+// void Task_8()
+// {
+//     int num = 1;
+//     Console.Write("Введите число: ");
+//     int num0 = Convert.ToInt32(Console.ReadLine());
+
+//     Console.WriteLine("Список четных чисел: ");
+//     while (num < num0)
+//     {
+//         if (num%2 == 0) Console.Write($"{num}, ");
+//         num = num + 1;
+//     }
+//     Console.Write("End.");
+
+// }
+// Task_8();
+
+
+
+
+// int num[] = int num1[0]
+// while (num < )
+
+
+
+// string num
+// string.Length 
+// num[1]
+
+
+
+----------------------------------------------------------
+
+
+
+// int Sum(int[] numbers)
+// {
+//     int limit = 0;
+//     int result = 0;
+//     foreach (int number in numbers)
+//     {
+//         if (IsPassed(number)) result += number;
+//     }
+//     return result;
+ 
+//     bool IsPassed(int number)
+//     {
+//         return number > limit;
+//     }
+// }
+ 
+// int[] numbers1 = { -3, -2, -1, 0, 1, 2, 3 };
+// int[] numbers2 = { 3, -4, 5, -6, 7 };
+ 
+// Console.WriteLine(Sum(numbers1));
+// Console.WriteLine(Sum(numbers2));
+
+
+
+
+
+
+int[] MaxNumber = 

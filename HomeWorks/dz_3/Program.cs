@@ -10,18 +10,15 @@
 // 23432 -> да
 
 
-void Palindrom()
-{
-Console.WriteLine("Введите число из пяти цифр: ");
-int num = Convert.ToInt32(Console.ReadLine());
-string str = num.ToString();
-if (str[0] == str[4] && str[1] == str[3]) Console.WriteLine($"Введеное вами число {num} - является палиндромом.");
-else Console.WriteLine($"Поздравляем! Вы ввели число: {num}.");
-}
-Palindrom();
-
-
-
+// void Palindrom()
+// {
+// Console.WriteLine("Введите число из пяти цифр: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// string str = num.ToString();
+// if (str[0] == str[4] && str[1] == str[3]) Console.WriteLine($"Введеное вами число {num} - является палиндромом.");
+// else Console.WriteLine($"Поздравляем! Вы ввели число: {num}.");
+// }
+// Palindrom();
 
 
 
@@ -127,13 +124,12 @@ Palindrom();
 
 // Console.WriteLine("Введите число N: ");
 // int num = Convert.ToInt32(Console.ReadLine());
+
 // Console.WriteLine($"Вы ввели число: {num}.");
 // Console.WriteLine($"Кубы чисел от 1 до {num}, составляют числа  ->  {numSquares(num)}.");
 
 
 //------------------------------------------------------------------------------
-
-
 
 
 

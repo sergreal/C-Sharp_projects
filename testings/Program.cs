@@ -422,7 +422,7 @@ WeekDay();
 // }
 // int res = numPalindrom();
 // Console.WriteLine(res);
- 
+
 // foreach (string num in numbers)
 
 //------------------------------------------------------------------------------
@@ -550,22 +550,595 @@ Task_13();
 //         if (IsPassed(number)) result += number;
 //     }
 //     return result;
- 
+
 //     bool IsPassed(int number)
 //     {
 //         return number > limit;
 //     }
 // }
- 
+
 // int[] numbers1 = { -3, -2, -1, 0, 1, 2, 3 };
 // int[] numbers2 = { 3, -4, 5, -6, 7 };
- 
+
 // Console.WriteLine(Sum(numbers1));
 // Console.WriteLine(Sum(numbers2));
 
 
 
+// ----------------------------------------------------------
 
 
 
-int[] MaxNumber = 
+
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+DZ-5;
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+
+// Задача 34: 
+// Задайте массив заполненный случайными положительными трёхзначными числами.  
+// Напишите программу, которая покажет количество чётных чисел в массиве.
+// [345, 897, 568, 234] -> 2
+//------------------------------------------------------------------------------
+
+// int[] FillArray(int size)
+// {
+//     int[] array = new int[size];  // задаем длинну массива
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = new Random().Next(100, 1000); //диапазон чисел в массиве
+//         Console.Write(array[i] + ", ");
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] massiv)
+// {
+//     int count = 0;
+//     for (int i = 0; i < massiv.Length; i++)
+//     {
+//         if (massiv[i] % 2 == 0)
+//             count++;
+//     }
+//     Console.WriteLine();
+//     Console.WriteLine($"Количество чётных чисел в массиве => {count}");
+// }
+
+// Console.Write("Введите размер массива: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// int[] array = FillArray(size);
+// PrintArray(array);
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+
+// void OutArray(int[] massiv)
+// {
+//     for (int i = 0; i < N - 1; i++)
+//     {
+//       Console.Write(massiv[i] +  ", ");
+//     }
+//     i = N - 1;
+//     Console.Write(massiv[i]);
+// }
+// int[] massiv = new int[N];
+// massiv = PrintArray();
+// OutArray(massiv);
+
+
+
+
+// int[] numbers = new int[size];
+// FillArrayRandomNumbers(numbers);
+// Console.WriteLine("Вот наш массив: ");
+
+//------------------------------------------------------------------------------
+
+// void FillArrayRandomNumbers(int[] numbers)
+// {
+//     for (int i = 0; i < numbers.Length; i++)
+//     {
+//         numbers[i] = new Random().Next(100, 1000);
+//     }
+// }
+
+// void PrintArray(int[] numbers)
+// {
+//     Console.Write("[ ");
+//     for (int i = 0; i < numbers.Length; i++)
+//     {
+//         Console.Write(numbers[i] + " ");
+//     }
+//     Console.Write("]");
+//     Console.WriteLine();
+// }
+
+// Console.WriteLine("Введите размер массива");
+// int size = Convert.ToInt32(Console.ReadLine());
+// int[] numbers = new int[size];
+// FillArrayRandomNumbers(numbers);
+// Console.WriteLine("Вот наш массив: ");
+
+// PrintArray(numbers);
+// int count = 0;
+// for (int z = 0; z < numbers.Length; z++)
+//     if (numbers[z] % 2 == 0)
+//         count++;
+
+// Console.WriteLine($"всего {numbers.Length} чисел, {count} из них чётные");
+
+
+
+
+// int[] FillArray(int size)
+//             {
+//             int[] mas = new int[size];
+//             for (int i=0;i<size;i++) 
+//                 {
+//                     mas[i]= new Random().Next(-10,11);
+//                 }
+//             return mas;
+//             }
+
+//       void PrintArray(int[] mmm)
+//             {
+//                        for (int i=0;i<mmm.Length;i++) 
+//                 {
+//                     if (i!=mmm.Length-1) Console.Write($"{mmm[i]}, ");
+//                     else Console.WriteLine($"{mmm[i]}");
+//                 }
+//             }
+
+
+//       int[] array = FillArray(10);
+//       PrintArray(array);
+
+
+
+// Console.WriteLine(result);
+
+
+// int[] nums2 = new int[4] { 1, 2, 3, 5 };
+
+// int[] FillArray()
+// {
+
+// }
+// Console.Write(FillArray);
+//------------------------------------------------------------------------------
+// int[] array ()
+// {
+//     int[] j = 0;
+//     Console.WriteLine("Введите число от 1 до бесконечности: ");
+//     int[] j = Convert.ToInt32(Console.ReadLine());
+// }
+// Console.WriteLine(array);
+//------------------------------------------------------------------------------
+// matr[i,j] = new Random().Next(1,10); // интервал от 1 до 10
+//------------------------------------------------------------------------------
+// int x = new Random().Next(10,100);
+//------------------------------------------------------------------------------
+// ....записки
+// int [] array = new int[2];    // так объявляется массив, говорящий о том что в массиве будет 2 элемента.
+// array[1] =     //  а так, выводится 2й элемент из массива.
+//------------------------------------------------------------------------------
+// string[,] table = new string[2, 5];
+//------------------------------------------------------------------------------
+// int[] FillArray(int size)
+// {
+//     int size = 4;
+//     int[] mas = new int[size];
+//     for (int i=0; i<size; i++)
+//     {
+//         mas[i] = new Random().Next(100, 1000);
+//     }
+//     return mas;
+// }
+
+// void PrintArray(int[] mmm)
+// {
+//     for (int i=0; i < mmm.Length; i++)
+//     {
+//         if (i != mmm.Length - 1) Console.Write($"{mmm[i]}, ");
+//         else Console.WriteLine($"{mmm[i]}");
+//     }
+// }
+
+// int[] FindSums(int[] mmm)
+// {
+//     int[] sums = new int[2];
+//     foreach (int item in mmm)
+//     {
+//         if (item > 0) sums[1] += item;
+//         else sums[0] += item;
+//     }
+//     return sums;
+// }
+
+// int[] array = FillArray(12);
+// PrintArray(array);
+// int[] results = FindSums(array);
+// Console.WriteLine($"Сумма положительных элементов массива равна {results[1]}");
+// Console.WriteLine($"Сумма отрицательных элементов массива равна {results[0]}");
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+
+// Задача 36: 
+// Задайте одномерный массив, заполненный случайными числами. 
+// Найдите сумму элементов, стоящих на нечётных позициях.
+
+// [3, 7, 23, 12] -> 19
+// [-4, -6, 89, 6]-> 0
+
+//------------------------------------------------------------------------------
+
+// int[] FillArray(int size)       // создали метод массив[], и сказали что он будет размера size
+// {
+//     int[] array = new int[size];     //задаем длинну массива, т.е. сколько в нем будет чисел
+//     for (int i = 0; i < array.Length; i++)     // создали цикл, где в массив array будут складываться числа, пока i будет меньше длинны массива (size)
+//     {
+//         array[i] = new Random().Next(-100, 100);   // записываем в массив array все рандомные числа, в диапазоне от-до (Next())
+//         Console.Write(array[i] + ", ");      // выводим на печать числа
+//     }
+//     return array;
+// }
+
+// void SumElements(int[] array) // метод для перебора чисел в массиве через одного и суммирования
+// {
+//     int sum = 0;
+//     for (int i = 0; i < array.Length; i=i+2)  //Начинаем с 1-го (i=0), проходим через одного i+2
+//     {
+//         if (i < array.Length)  //суммируем в цикле 
+//         {
+//             sum = sum + array[i];
+//         }
+//     }
+//     Console.WriteLine();
+//     Console.Write($"Сумма элементов, стоящих на нечётных позициях => {sum}");
+// }
+
+// Console.Write($"Введите размер массива: ");      // запрашиваем на ввод определение кол-ва чисел в массиве
+// int size = Convert.ToInt32(Console.ReadLine());      //  Console.ReadLine() считывает и кладет размер массива в переменную size
+// int[] massiv = FillArray(size);       // запускаем метод FillArray(size) и результат кладем в переменную array
+// SumElements(massiv); // запускаем метод SumElements и передаем ему на вход данные с предыдущего метода
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+
+// void Main(string[] args)
+// {
+//     var rnd = new Random();
+//     var arr = new int[1];
+
+//     for (int i = 0; i < arr.Length; i++)
+//         Console.Write("{0}\t", arr[i] = rnd.Next(-100, 100));
+//     Console.WriteLine();
+
+//     var even = arr.Where((element, index) => index % 2 != 0);
+//     var odd = arr.Where((element, index) => index % 2 == 0);
+
+//     Console.WriteLine("Чётные. Количество: {0}. Сумма: {1}.", even.Count(), even.Sum());
+//     Console.WriteLine("Нечётные. Количество: {0}. Сумма: {1}.", odd.Count(), odd.Sum());
+
+//     Console.ReadKey();
+// }
+// Main();
+
+
+
+//------------------------------------------------------------------------------
+
+// Найдите сумму чисел массива, которые стоят на нечетных местах 
+// и при этом превосходят сумму крайних элементов массива
+
+
+// void Main(string[] args)
+// {
+//     int n = 0;
+
+//     while (n <= 4)   //спрашиваем длину массива у пользоватлея - требуем не менее 4-х
+//     {
+//         Console.WriteLine("Введите длину массива (не менее 4-х элементов)");
+//         Int32.Parse(Console.ReadLine());
+//     }
+
+//     int[] nn = new int[n]; //Создаем массив заданной пользователем длины
+
+//     for (int i = 0; i < n; i++)  //Пользователь вводит элементы массива
+//     {
+//         Console.WriteLine("Введите {0} элемент массива", i + 1);
+//         nn[i] = Int32.Parse(Console.ReadLine());
+//     }
+
+//     Random r = new Random(DateTime.Now.Millisecond);  //Или через генератор случайных чисел
+//     for (int i = 0; i < n; i++)
+//     {
+//         nn[i] = r.Next(1, 100); //Записать случайное число от 1 до 100 
+//     }
+
+//     int sr = nn[0] + nn[nn.Length - 1];
+//     int sum = 0;
+//     //Начинаем с 3-го (i=2) - заканчиваем предпоследним  (nn.Length-1), проходим через одного i+2
+//     for (int i = 2; i < nn.Length - 1; i += 2)
+//     {
+//         if (nn[i] > sum)
+//         {
+//             sum += nn[i];
+//         }
+//     }
+//     Console.WriteLine("Сумма {0}", sum);
+//     Console.ReadKey();
+// }
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+
+// Задача 38: 
+// Задайте массив вещественных чисел. 
+// Найдите разницу между максимальным и минимальным элементов массива.
+//------------------------------------------------------------------------------
+
+// 1)
+// double[] FillArray(int size)
+// {
+//     double[] numbers = new double[size];
+//     Random random = new Random();
+//     Console.Write($"Массив из {size} чисел:   ");
+//     for (int i = 0; i < numbers.Length; i++)
+//     {
+//         numbers[i] = Math.Round(random.NextDouble() * ((-100) - 100) + 100, 2);
+//         Console.Write(numbers[i] + ";  ");
+//     }
+//     return numbers;
+// }
+
+// // 2)
+// void FindDiff(double[] array)
+// {
+//     int min = 0;
+//     int max = 0;
+//     double diff = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] > array[max]) max = i;
+//         else if (array[i] < array[min]) min = i;
+//     }
+//     Console.WriteLine();
+//     Console.WriteLine($"Минимальный элемент массива: array[" + min + "] = " + array[min]);
+//     Console.WriteLine($"Максимальный элемент массива: array[" + max + "] = " + array[max]);
+
+//     double numMin = array[min];
+//     double numMax = array[max];
+//     diff = numMax - numMin;
+//     Console.WriteLine($"Разница между максимальным и минимальным, элементами массива:  ");
+//     Console.WriteLine($"{numMax} - {numMin} = {diff}");
+// }
+
+// Console.Write("Введите размер массива: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// double[] MinMax = FillArray(size);
+// FindDiff(MinMax);
+
+
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+
+
+// void SumElements(int[] array) // метод для перебора чисел в массиве через одного и суммирования
+// {
+//     int sum = 0;
+//     for (int i = 0; i < array.Length; i=i+2)  //Начинаем с 1-го (i=0), проходим через одного i+2
+//     {
+//         if (i < array.Length)  //суммируем в цикле 
+//         {
+//             sum = sum + array[i];
+//         }
+//     }
+//     Console.Write($"Сумма элементов, стоящих на нечётных позициях => {sum}");
+// }
+
+// Console.Write($"Введите размер массива: ");      // запрашиваем на ввод определение кол-ва чисел в массиве
+// int size = Convert.ToInt32(Console.ReadLine());      //  Console.ReadLine() считывает и кладет размер массива в переменную size
+// int[] massiv = FillArray(size);       // запускаем метод FillArray(size) и результат кладем в переменную array
+// SumElements(massiv); // запускаем метод SumElements и передаем ему на вход данные с предыдущего метода
+
+
+
+// void FillArray(int size)
+// {
+//     int[] array = new int[size];
+
+//     double min = 0;
+//     double max = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] > array[max]) max = i;
+//         else if (array[i] < array[min]) min = i;
+//     }
+//     Console.Write("min : array[" + min + "] = " + array[min]);
+//     Console.Write("max : array[" + max + "] = " + array[max]);
+// }
+// Console.Write($"Введите размер массива: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// FillArray();
+
+
+
+
+
+// void FindDiff()
+// {
+//     double difference = 0;
+//     double array = new { 8, 3, 5, -1, 2 };
+//     double min = array[0];
+//     double max = min;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] < min) min = array[i];
+//         else if (array[i] > max) max = array[i];
+//     }
+//     difference = double.of(max - min);
+//     return difference;
+
+// }
+// FindDiff();
+
+// {
+//     OptionalInt range = OptionalInt.empty();
+//     if (array != null && array.length > 0)
+//     {
+//         int min = array[0];
+//         int max = min;
+//         for (int n : array)
+//         {
+//             if (n < min)
+//             {
+//                 min = n;
+//             }
+//             else if (n > max)
+//             {
+//                 max = n;
+//             }
+//         }
+//         range = OptionalInt.of(max - min);
+//     }
+//     return range;
+// }
+
+
+
+
+
+
+
+// int[] FillArray(int size)
+// {
+//     double[] array = new double[size];
+//     Random random = new Random();
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = random.NextDouble();
+//     }
+//     Console.Write(array[i] + ", ");
+//     return array;
+// }
+
+// Console.Write("Введите размер массива: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// FillArray(size);
+
+
+
+
+// double[] array = new double[20];
+// Random rand = new Random();
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i] = 5 - rand.Next(11) + rand.NextDouble();
+// }
+
+// Console.ReadLine();
+
+
+
+// double[,] a = new double[5, 10];
+
+// Random random = new Random();
+// for (int i = 0; i < 5; i++)
+// {
+//     for (int j = 0; j < 10; j++)
+//     {
+//         a[i, j] = random.Next(100);
+//         Console.Write("{0,4}", a[i, j]);
+//     }
+//     Console.WriteLine();
+// }
+
+
+
+//------------------------------------------------------------------------------
+
+// using System;
+// namespace Prim_Mas1
+// {
+//    class Program
+//    {
+//       public static void Main(string[] args)
+//       {
+//          double []x = new double[5];
+//          int i, n = x.Length;
+//          Console.WriteLine("Задайте {0} вещественных чисел:", n);
+//          for(i = 0; i < n; i++)
+//          {
+//             Console.Write("x[{0}] = ", i);
+//             x[i] = double.Parse(Console.ReadLine());
+//          }
+//          double s = 0;
+//          for(i = 0; i < n; i++)
+//             s += x[i];
+//          s /= n; // это среднее значение
+//          for(i = 0; i < n; i++)
+//             x[i] -= s;
+//          Console.WriteLine("Массив после обработки:");
+//          foreach(double r in x)
+//             Console.WriteLine(r);
+//          Console.Write("Press any key to continue . . . ");
+//          Console.ReadKey(true);
+//       }
+//    }
+// }
+
+//------------------------------------------------------------------------------
+
+// int Max(int arg1, int arg2, int arg3)
+
+// {
+//     int result = arg1;
+//     if (arg2 > result) result = arg2;
+//     if (arg3 > result) result = arg3;
+//     return result;
+// }
+
+// int a1 = 2;
+// int b1 = 17;
+// int c1 = 89;
+
+// int a2 = 4;
+// int b2 = 173;
+// int c2 = 82;
+
+// int max1 = Max(a1, b1, c1);
+// int max2 = Max(a2, b2, c2);
+
+// int max = Max(max1, max2, c1);
+
+// Console.WriteLine(max);
+
+
+
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+
+
+
+
+
+

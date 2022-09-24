@@ -1,36 +1,34 @@
 ﻿
 
+int[] FillArray(int size)
+{
+    int[] mas = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        mas[i] = new Random().Next(-10, 11);
+    }
+    return mas;
+}
+void PrintArray(int[] mmm)
+{
+    for (int i = 0; i < mmm.Length; i++)
+    {
+        if (i != mmm.Length - 1) Console.Write($"{mmm[i]}, ");
+        else Console.WriteLine($"{mmm[i]}");
+    }
+}
 
-// int[] FillArray(int size)
-//             {
-//             int[] mas = new int[size];
+// int[] Reverse1(int[] mmm)
+// {
+//     int[] revmas = new int[mmm.Length];
+//     for (int i = 0; i < mmm.Length - 1; i++) revmas[i] = mmm[mmm.Length - 1 - i];
+//     return revmas;
 
-//             for (int i=0;i<size;i++) 
-//                 {
-//                     mas[i]= new Random().Next(-10,11);
-//                 }
-//             return mas;
-//             }
-//       void PrintArray(int[] mmm)
-//             {
-//                        for (int i=0;i<mmm.Length;i++) 
-//                 {
-//                     if (i!=mmm.Length-1) Console.Write($"{mmm[i]}, ");
-//                     else Console.WriteLine($"{mmm[i]}");
-//                 }
-//             }
+// }
 
-//       int[] Reverse1(int[] mmm)
-//       {
-//         int[] revmas = new int [mmm.Length];
-//         for (int i=0;i<mmm.Length - 1; i++) revmas[i]=mmm[mmm.Length-1-i];
-//         return revmas;
-        
-//       }
-      
-//       int[] array = FillArray(10);
-//       PrintArray(array);
-//       PrintArray(Reverse1(array));
+int[] array = FillArray(10);
+PrintArray(array);
+// PrintArray(Reverse1(array));
 
 
 
@@ -212,7 +210,7 @@
 //         if (arg1==arg2 ||  arg1==arg3 || arg2==arg3) Stats [1] = "равнобедренный";
 //         if (arg1==arg2==arg3) Stats[1] = "равносторонний";
 //         Stats [2] = arg1+arg2+arg3;
-        
+
 //      }
 
 //     return res;

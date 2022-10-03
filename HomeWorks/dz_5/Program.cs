@@ -125,4 +125,3 @@
 // double[] MinMax = FillArray(size);
 // FindDiff(MinMax);
 
-

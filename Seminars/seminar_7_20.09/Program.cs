@@ -55,7 +55,7 @@
 5 81 2 9
 8 4 2 4
 
-Задача 48: Задайте двумерный массив размера m на n, каждый элемент в массиве находится по формуле: Aₘₙ = m+n. Выведите полученный массив на экран.
+Задача 48: Задайте двумерный массив размера m на n, каждый элемент в массиве находится по формуле: Aₘₙ = m + n.Выведите полученный массив на экран.
 m = 3, n = 4.
 0 1 2 3
 1 2 3 4
@@ -76,7 +76,7 @@ m = 3, n = 4.
 // int[,] FillMas(int n, int m)
 // {
 // int[,] mas = new int[n, m];
-   
+
 //     for (int i = 0; i < n; i++)
 //         { 
 //         for (int j = 0; j < m; j++)
@@ -86,14 +86,35 @@ m = 3, n = 4.
 // }
 // return mas;
 
-
-
 // System.Console.Write("Введите количество строк n = ");
 // int n = Convert.ToInt32(Console.ReadLine());
 // System.Console.Write("Введите количество столбцов m = ");
 // int m = Convert.ToInt32(Console.ReadLine());
 // int[,] newArray = FillMas(n, m);
 // PrintArray(newArray);
+
+
+int[] FillMas(int n)
+{
+    int[] mas = new int[n];
+    for (int i = 0; i < n; i++)
+    {
+        mas[i] += i;
+    }
+}
+return mas;
+
+Console.Write("Введите количество строк n = ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+int[] newArray = FillMas(n);
+PrintArray(newArray);
+
+
+
+
+
+
 
 //------------------------------------------------------------------------------
 
@@ -142,7 +163,7 @@ int[,] Array(int n, int m)
     {
         for (int j = 0; j < m; j++)
         {
-            mas[i, j] = i+j;        
+            mas[i, j] = i + j;
         }
     }
     return mas;
@@ -185,14 +206,14 @@ int[,] FillMas(int n, int m)
     return mas;
 }
 
-int[,] EvenNum(int[,]mas)
+int[,] EvenNum(int[,] mas)
 {
     for (int i = 0; i < mas.GetLength(0); i++)
     {
         for (int j = 0; j < mas.GetLength(1); j++)
         {
-            if (i%2!=0 && j%2!=0)
-            mas[i,j]=(mas[i,j]*mas[i,j]);
+            if (i % 2 != 0 && j % 2 != 0)
+                mas[i, j] = (mas[i, j] * mas[i, j]);
 
         }
     }
@@ -227,7 +248,7 @@ PrintArray(EvenNum(newArray));
 //------------------------------------------------------------------------------
 
 Задача 51: Задайте двумерный массив. 
-Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
+Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1; 1) и т.д.
 Например, задан массив:
 1 4 7 2
 5 9 2 3
@@ -266,13 +287,13 @@ void PrintArray(int[,] arr)
 
 int SumInd(int[,] mas)
 {
-    int sum=0;
+    int sum = 0;
     for (int i = 0; i < mas.GetLength(0); i++)
     {
         for (int j = 0; j < mas.GetLength(1); j++)
         {
-            if (i==j)
-                sum = sum+ mas[i, j];
+            if (i == j)
+                sum = sum + mas[i, j];
         }
     }
     return sum;
@@ -284,7 +305,7 @@ System.Console.Write("Введите количество столбцов m = "
 int m = Convert.ToInt32(Console.ReadLine());
 int[,] newArray = FillMas(n, m);
 PrintArray(newArray);
-int sum=SumInd(newArray);
+int sum = SumInd(newArray);
 Console.Write("Сумма= ");
 Console.Write($"{sum}");
 
